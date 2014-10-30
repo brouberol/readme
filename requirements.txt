@@ -1,3 +1,6 @@
+cssmin
 flask
+flask-assets
 flask-restless
+jsmin
 sqlalchemy

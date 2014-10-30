@@ -1,15 +1,6 @@
-import flask.ext.restless as rest
+# -*- coding: utf-8 -*-
 
-from flask import Flask
-from readme.model import Recommendation
-from readme.db import session
-
-app = Flask(__name__)
-manager = rest.APIManager(app, session=session)
-recommendation_blueprint = manager.create_api(
-    Recommendation,
-    methods=['GET', 'POST', 'PUT', 'DELETE']
-)
+from readme import app
 
 if __name__ == '__main__':
     app.run(

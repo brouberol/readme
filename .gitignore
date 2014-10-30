@@ -28,4 +28,8 @@ pip-log.txt
 nosetests.xml
 cover/
 
+# static files and compiled assets
 readme/data/*.db
+readme/static/js/packed.js
+readme/static/css/packed.css
+readme/static/.webassets-cache
