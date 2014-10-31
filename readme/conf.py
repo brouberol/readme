@@ -10,7 +10,7 @@ DB_TABLE = 'recommendation'
 
 # JS Assets
 JS_DIR = 'js'
-JS_FILES = ['angular.js']
+JS_FILES = ['angular.js', 'controller.js']
 PACKED_JS = 'packed.js'
 
 # CSS Assets

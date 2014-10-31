@@ -49,4 +49,4 @@ assets.register('css_all', css)
 
 @app.route('/')
 def index():
-    return render_template('base.html.jinja2')
+    return render_template('index.html.jinja2')
