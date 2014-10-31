@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    {% assets "js_all" %}
+        <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+    {% endassets %}
+    {% assets "css_all" %}
+        <link rel="stylesheet" src="{{ ASSET_URL }}">
+    {% endassets %}
+    {% block title %}
+        <title>Readme - Recommandez des livres</title>
+    {% endblock %}
+</head>
+
+<body>
+    {% block content %}{% endblock %}
+</body>
+</html>

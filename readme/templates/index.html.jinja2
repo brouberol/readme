@@ -1,0 +1,16 @@
+{% extends "base.html.jinja2" %}
+
+{% block content %}
+<h1>Readme</h1>
+
+<div>
+    <p>Liste des recommendations</p>
+    <div ng-controller="RecoCtrl as reco">
+        <ul>
+            <li ng-repeat="item in reco.items">
+              {{ item.book_title | angular }}
+          </li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
