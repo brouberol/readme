@@ -6,6 +6,7 @@ import flask.ext.restless as rest
 
 from flask import Flask, render_template
 from flask.ext.assets import Environment, Bundle
+from flask.ext.triangle import Triangle
 
 from readme.model import Recommendation
 from readme.db import session
@@ -13,6 +14,9 @@ from readme import conf as c
 
 
 app = Flask(__name__)
+
+# Make the application compatible with AngularJS
+Triangle(app)
 
 # Definition of the REST API over the database models
 manager = rest.APIManager(app, session=session)

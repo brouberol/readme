@@ -2,5 +2,6 @@ cssmin
 flask
 flask-assets
 flask-restless
+flask-triangle
 jsmin
 sqlalchemy
