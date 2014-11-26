@@ -1,21 +1,20 @@
 angular.module('app', []);
 
 function RecoCtrl (RecoService) {
-  this.items = RecoService.getRecommendations();
-  console.log(this.items);
+  var ctrl = this;
+  RecoService.getRecommendations().success(
+    function (data, status, headers, config) {
+      ctrl.items = data.objects;
+    }
+  );
 };
 
 
-// implement it with ressource?
 function RecoService ($http) {
-  this.getRecommendations = function () {
-    $http.get('/api/recommendation').
-    success(function (data, status, headers, config) {
-      return data['objects'];
-    }).
-    error(function (data, status, headers, config) {
-      return data['objects'] || "Request failed";
-    });
+  return {
+    getRecommendations: function () {
+      return $http.get('/api/recommendation');
+    },
   };
 }
 
